@@ -1,0 +1,16 @@
+<div class="mainContent">
+  <div class="title">
+     Calculator
+  </div>
+  <div class="calculatorContainer">
+     <div class="results">
+        {{ resultValue || displayValue }}
+     </div>
+     <div class="buttonsContainer">
+        <button *ngFor="let number of numbers" (click)="inputValue(number)">{{ number }}</button>
+        <button *ngFor="let operator of operators" (click)="inputOperator(operator)">{{ operator }}</button>
+        <button (click)="calculate()">=</button>
+        <button (click)="clear()">C</button>
+     </div>
+  </div>
+</div>
